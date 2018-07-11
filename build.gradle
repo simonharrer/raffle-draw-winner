@@ -1,0 +1,25 @@
+plugins {
+    id "java"
+    id "application"
+    id "com.simonharrer.modernizer" version "1.6.0-1"
+    id "net.ltgt.errorprone" version "0.0.14"
+    id "com.github.ben-manes.versions" version "0.20.0"
+    id 'com.github.sherter.google-java-format' version '0.7.1'
+    id "com.github.spotbugs" version "1.6.2"
+    id "org.kordamp.gradle.stats" version "0.2.2"
+    id 'net.nemerosa.versioning' version '2.0.0'
+    id "com.github.johnrengelman.shadow" version "2.0.4"
+    id "net.ossindex.audit" version "0.3.19-beta"
+}
+
+version = versioning.info.full
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = "javacomp.Draw"
+
+dependencies {
+    compile group: 'org.twitter4j', name: 'twitter4j-core', version: '4.0.6'
+}
